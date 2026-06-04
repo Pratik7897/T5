@@ -4,8 +4,6 @@
 .text-center { text-align: center; }
 .uppercase { text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; }
 .flex-1 { flex: 1; }
-.text-accent { color: var(--accent-color); }
-.text-success { color: var(--success); }
 
 .product-details-grid {
   display: grid;
@@ -15,11 +13,10 @@
 }
 
 .main-image-container {
-  border-radius: var(--border-radius);
   overflow: hidden;
   position: relative;
-  border: 1px solid var(--border-color);
-  background: var(--bg-secondary);
+  background: var(--bg-tertiary);
+  padding: 2rem;
 }
 
 .main-image {
@@ -35,9 +32,10 @@
 
 .product-title-large {
   font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.2;
+  font-weight: 500;
+  line-height: 1.1;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .product-rating-detailed {
@@ -46,14 +44,9 @@
   gap: 0.5rem;
 }
 
-.stars {
-  color: #fbbf24;
-  display: flex;
-  gap: 2px;
-}
-
 .rating-score {
-  font-weight: bold;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 .review-count {
@@ -61,9 +54,9 @@
 }
 
 .product-price-large {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--accent-color);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 .product-description {
@@ -75,22 +68,18 @@
 .add-to-cart-section {
   display: flex;
   gap: 1rem;
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
 }
 
 .quantity-selector {
   display: flex;
   align-items: center;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  overflow: hidden;
   background: var(--bg-color);
 }
 
 .quantity-selector button {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   font-size: 1.25rem;
   color: var(--text-primary);
   background: var(--bg-secondary);
@@ -102,23 +91,20 @@
 }
 
 .quantity-selector span {
-  width: 40px;
+  width: 48px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .product-features {
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  overflow: hidden;
+  border-top: 1px solid var(--border-color);
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: var(--bg-secondary);
+  gap: 1.5rem;
+  padding: 1.5rem 0;
 }
 
 .feature-item:not(:last-child) {
@@ -126,12 +112,13 @@
 }
 
 .feature-icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
+  color: var(--text-primary);
 }
 
 .feature-item h4 {
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 0.25rem;
 }
 

@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingCart, Hexagon, Search } from 'lucide-react';
+import { ShoppingCart, Search } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = ({ cartCount }) => {
   const location = useLocation();
 
   return (
-    <nav className="navbar glass-panel">
+    <nav className="navbar">
       <div className="container flex-between nav-content">
-        <Link to="/" className="brand flex-center">
-          <Hexagon className="brand-icon" size={28} />
-          <span className="brand-name text-gradient">NEXUS</span>
+        <Link to="/" className="brand">
+          <span className="brand-name">NEXUS</span>
         </Link>
         
         <div className="nav-links">
@@ -21,10 +20,10 @@ const Navbar = ({ cartCount }) => {
 
         <div className="nav-actions flex-center">
           <button className="icon-btn" aria-label="Search">
-            <Search size={20} />
+            <Search size={20} strokeWidth={1.5} />
           </button>
           <Link to="/cart" className="cart-btn icon-btn" aria-label="Cart">
-            <ShoppingCart size={20} />
+            <ShoppingCart size={20} strokeWidth={1.5} />
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </Link>
         </div>

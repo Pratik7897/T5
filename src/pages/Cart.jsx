@@ -28,7 +28,7 @@ const Cart = ({ cartItems, removeFromCart }) => {
       <div className="cart-grid">
         <div className="cart-items">
           {cartItems.map((item, index) => (
-            <div key={`${item.id}-${index}`} className="cart-item glass-panel">
+            <div key={`${item.id}-${index}`} className="cart-item">
               <img src={item.image} alt={item.name} className="cart-item-img" />
               <div className="cart-item-details">
                 <Link to={`/product/${item.id}`} className="cart-item-title">{item.name}</Link>
@@ -40,13 +40,13 @@ const Cart = ({ cartItems, removeFromCart }) => {
                 onClick={() => removeFromCart(index)}
                 aria-label="Remove item"
               >
-                <Trash2 size={20} />
+                <Trash2 size={20} strokeWidth={1.5} />
               </button>
             </div>
           ))}
         </div>
 
-        <div className="cart-summary glass-panel">
+        <div className="cart-summary">
           <h3 className="mb-4">Order Summary</h3>
           <div className="summary-row">
             <span>Subtotal</span>

@@ -1,23 +1,21 @@
 .product-card {
-  background-color: var(--bg-secondary);
-  border-radius: var(--border-radius);
+  background-color: transparent;
+  border-radius: 0;
   overflow: hidden;
-  border: 1px solid var(--border-color);
-  transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+  transition: transform var(--transition-fast);
 }
 
 .product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--card-shadow);
-  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-4px);
 }
 
 .product-image-container {
   position: relative;
   display: block;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/5;
   overflow: hidden;
-  background-color: #111827;
+  background-color: var(--bg-tertiary);
+  margin-bottom: 1rem;
 }
 
 .product-image {
@@ -28,7 +26,7 @@
 }
 
 .product-card:hover .product-image {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .product-badge {
@@ -41,7 +39,7 @@
 .product-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +52,7 @@
 }
 
 .overlay-btn {
-  transform: translateY(20px);
+  transform: translateY(10px);
   opacity: 0;
   transition: all var(--transition-fast) 0.1s;
 }
@@ -65,7 +63,7 @@
 }
 
 .product-info {
-  padding: 1.5rem;
+  padding: 0 0.5rem;
 }
 
 .product-meta {
@@ -73,7 +71,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
-  font-size: 0.875rem;
 }
 
 .product-category {
@@ -87,23 +84,23 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  color: #fbbf24;
+  font-size: 0.875rem;
 }
 
 .product-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  transition: color var(--transition-fast);
+  transition: opacity var(--transition-fast);
 }
 
 .product-title:hover {
-  color: var(--accent-color);
+  opacity: 0.7;
 }
 
 .product-price-row {
@@ -113,7 +110,7 @@
 }
 
 .product-price {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.125rem;
+  font-weight: 500;
   color: var(--text-primary);
 }

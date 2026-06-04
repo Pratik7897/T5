@@ -32,19 +32,20 @@
 .link-group h4 {
   color: var(--text-primary);
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .link-group a {
   display: block;
   color: var(--text-secondary);
   margin-bottom: 0.75rem;
-  transition: color var(--transition-fast), transform var(--transition-fast);
+  font-size: 0.875rem;
+  transition: opacity var(--transition-fast);
 }
 
 .link-group a:hover {
-  color: var(--accent-color);
-  transform: translateX(4px);
+  opacity: 0.7;
 }
 
 .footer-bottom {

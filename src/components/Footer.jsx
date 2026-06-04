@@ -7,18 +7,17 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-content">
         <div className="footer-brand">
-          <div className="brand flex-center" style={{ justifyContent: 'flex-start' }}>
-            <Hexagon className="brand-icon" size={28} />
-            <span className="brand-name text-gradient">NEXUS</span>
+          <div className="brand" style={{ justifyContent: 'flex-start' }}>
+            <span className="brand-name">NEXUS</span>
           </div>
           <p className="footer-desc">
             Next-generation electronics and accessories for the modern world.
             Experience quality without compromise.
           </p>
           <div className="social-links">
-            <a href="#" className="icon-btn" aria-label="Mail"><Mail size={20} /></a>
-            <a href="#" className="icon-btn" aria-label="Message"><MessageCircle size={20} /></a>
-            <a href="#" className="icon-btn" aria-label="Globe"><Globe size={20} /></a>
+            <a href="#" className="icon-btn" aria-label="Mail"><Mail size={20} strokeWidth={1.5} /></a>
+            <a href="#" className="icon-btn" aria-label="Message"><MessageCircle size={20} strokeWidth={1.5} /></a>
+            <a href="#" className="icon-btn" aria-label="Globe"><Globe size={20} strokeWidth={1.5} /></a>
           </div>
         </div>
         

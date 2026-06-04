@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Star, ShoppingCart } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import './ProductCard.css';
 
 const ProductCard = ({ product, onAddToCart }) => {
@@ -21,7 +21,7 @@ const ProductCard = ({ product, onAddToCart }) => {
               onAddToCart(product);
             }}
           >
-            <ShoppingCart size={18} /> Quick Add
+            <ShoppingCart size={16} strokeWidth={1.5} /> Quick Add
           </button>
         </div>
       </Link>
@@ -29,10 +29,6 @@ const ProductCard = ({ product, onAddToCart }) => {
       <div className="product-info">
         <div className="product-meta">
           <span className="product-category">{product.category}</span>
-          <div className="product-rating">
-            <Star size={14} className="star-icon fill-current" />
-            <span>{product.rating}</span>
-          </div>
         </div>
         
         <Link to={`/product/${product.id}`}>

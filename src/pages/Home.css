@@ -1,7 +1,8 @@
 .hero-section {
-  padding: 6rem 0;
+  padding: 8rem 0;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .hero-content {
@@ -12,88 +13,70 @@
 }
 
 .hero-title {
-  font-size: 4rem;
-  line-height: 1.1;
-  font-weight: 800;
+  font-size: 4.5rem;
+  line-height: 1.05;
+  font-weight: 500;
   margin-bottom: 1.5rem;
+  letter-spacing: -0.04em;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: var(--text-secondary);
-  margin-bottom: 2.5rem;
-  max-width: 500px;
+  margin-bottom: 3rem;
+  max-width: 480px;
+  line-height: 1.6;
 }
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .hero-image {
   position: relative;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .hero-image img {
   width: 100%;
   height: auto;
-  border-radius: 20px;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+  filter: grayscale(20%);
+  transition: filter var(--transition-slow);
 }
 
-.hero-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle, rgba(99,102,241,0.4) 0%, rgba(15,23,42,0) 70%);
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  filter: blur(40px);
+.hero-image:hover img {
+  filter: grayscale(0%);
 }
 
 .features-section {
-  padding: 4rem 0;
-  background-color: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
+  padding: 6rem 0;
   border-bottom: 1px solid var(--border-color);
 }
 
 .feature-card {
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
   transition: transform var(--transition-fast);
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
-}
-
 .feature-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: rgba(99, 102, 241, 0.1);
-  color: var(--primary-color);
   margin-bottom: 1.5rem;
+  color: var(--text-primary);
 }
 
 .feature-card h3 {
   font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 .feature-card p {
   color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.6;
 }
 
 .section-padding {
@@ -102,23 +85,15 @@
 
 .section-header {
   margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
 }
 
 @media (max-width: 992px) {
   .hero-content {
     grid-template-columns: 1fr;
-    text-align: center;
   }
-  
-  .hero-subtitle {
-    margin: 0 auto 2.5rem;
-  }
-  
-  .hero-actions {
-    justify-content: center;
-  }
-  
   .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
