@@ -44,7 +44,7 @@
 .filter-pill.active {
   background-color: var(--text-primary);
   border-color: var(--text-primary);
-  color: #000;
+  color: var(--bg-color);
 }
 
 .empty-state {

@@ -15,6 +15,19 @@
   --transition-slow: 0.3s ease;
 }
 
+[data-theme='light'] {
+  --primary-color: #000000;
+  --primary-hover: #1a1a1a;
+  --bg-color: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f5f5f5;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --accent-color: #000000;
+  --border-color: #e5e5e5;
+  --success: #f0f0f0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -74,7 +87,7 @@ button {
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: #000000;
+  color: var(--bg-color);
 }
 
 .btn-primary:hover {
@@ -154,7 +167,7 @@ button {
 
 .badge-new {
   background-color: var(--text-primary);
-  color: #000000;
+  color: var(--bg-color);
 }
 
 .badge-sale {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingCart, Search } from 'lucide-react';
+import { ShoppingCart, Search, Moon, Sun } from 'lucide-react';
 import './Navbar.css';
 
-const Navbar = ({ cartCount }) => {
+const Navbar = ({ cartCount, theme, toggleTheme }) => {
   const location = useLocation();
 
   return (
@@ -19,6 +19,9 @@ const Navbar = ({ cartCount }) => {
         </div>
 
         <div className="nav-actions flex-center">
+          <button className="icon-btn" aria-label="Toggle Theme" onClick={toggleTheme}>
+            {theme === 'dark' ? <Sun size={20} strokeWidth={1.5} /> : <Moon size={20} strokeWidth={1.5} />}
+          </button>
           <button className="icon-btn" aria-label="Search">
             <Search size={20} strokeWidth={1.5} />
           </button>

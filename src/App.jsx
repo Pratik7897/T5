@@ -14,9 +14,27 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   });
 
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme ? savedTheme : 'dark';
+  });
+
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
 
   const handleAddToCart = (product) => {
     setCartItems(prev => [...prev, product]);
@@ -30,7 +48,7 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        <Navbar cartCount={cartItems.length} />
+        <Navbar cartCount={cartItems.length} theme={theme} toggleTheme={toggleTheme} />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home onAddToCart={handleAddToCart} />} />
